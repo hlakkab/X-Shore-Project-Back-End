@@ -1,4 +1,6 @@
-package com.devglan.userportal;
+package com.devglan.userportal.services;
+
+import com.devglan.userportal.models.Trips;
 
 import java.util.List;
 

@@ -1,5 +1,7 @@
-package com.devglan.userportal;
+package com.devglan.userportal.controllers;
 
+import com.devglan.userportal.models.Cab;
+import com.devglan.userportal.services.CabService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.*;

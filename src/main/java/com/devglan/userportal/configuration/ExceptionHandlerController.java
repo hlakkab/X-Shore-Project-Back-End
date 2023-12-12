@@ -1,4 +1,4 @@
-package com.devglan.userportal;
+package com.devglan.userportal.configuration;
 
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.ControllerAdvice;

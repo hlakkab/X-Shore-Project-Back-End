@@ -1,5 +1,8 @@
-package com.devglan.userportal;
+package com.devglan.userportal.serviceImpl;
 
+import com.devglan.userportal.repository.TripsRepository;
+import com.devglan.userportal.models.Trips;
+import com.devglan.userportal.services.TripsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Service;

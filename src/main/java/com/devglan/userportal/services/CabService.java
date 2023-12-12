@@ -1,4 +1,6 @@
-package com.devglan.userportal;
+package com.devglan.userportal.services;
+
+import com.devglan.userportal.models.Cab;
 
 import java.util.List;
 

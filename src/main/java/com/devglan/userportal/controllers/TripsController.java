@@ -1,5 +1,6 @@
-package com.devglan.userportal;
+package com.devglan.userportal.controllers;
 
+import com.devglan.userportal.models.Trips;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,7 @@ import java.util.List;
 public class TripsController {
 	
     @Autowired
-    private TripsService TripsService;
+    private com.devglan.userportal.services.TripsService TripsService;
 
     @PostMapping
     public Trips create(@RequestBody Trips trips){

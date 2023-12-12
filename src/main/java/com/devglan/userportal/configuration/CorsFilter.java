@@ -1,4 +1,4 @@
-package com.devglan.userportal;
+package com.devglan.userportal.configuration;
 
 import org.springframework.web.filter.OncePerRequestFilter;
 import javax.servlet.FilterChain;

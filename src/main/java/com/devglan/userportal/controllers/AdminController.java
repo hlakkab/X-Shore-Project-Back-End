@@ -1,5 +1,7 @@
-package com.devglan.userportal;
+package com.devglan.userportal.controllers;
 
+import com.devglan.userportal.models.Admin;
+import com.devglan.userportal.services.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +17,7 @@ public class AdminController {
     private AdminService adminService;
         
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public Admin findByMemailAndMpassword(@RequestBody Admin loginAdmin) 
+	public Admin findByMemailAndMpassword(@RequestBody Admin loginAdmin)
 	{
 		return adminService.findByMemailAndMpassword(loginAdmin.getmemail(),loginAdmin.getmpassword());
 	}

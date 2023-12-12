@@ -1,4 +1,4 @@
-package com.devglan.userportal;
+package com.devglan.userportal.models;
 
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 

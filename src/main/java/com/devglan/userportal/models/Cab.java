@@ -1,4 +1,4 @@
-package com.devglan.userportal;
+package com.devglan.userportal.models;
 
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
@@ -8,6 +8,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Date;
+
 @EnableAspectJAutoProxy(proxyTargetClass = false)
 @Entity
 @Table(name = "cabs")
@@ -22,23 +27,56 @@ public class Cab {
     @Column
     private String driver_name;
     @Column
-    private String vacant_space;
-    @Column
     private String source;
     @Column
     private String destination;
     @Column
-    private String driver_auth;
-    @Column
     private String driver_mob;
+    @Column
+    private LocalDate date;
+    @Column
+    private LocalTime time;
     @Column
     private String compnyId;
     @Column
-    private String pickup;
+    private int price;
     @Column
-    private String dropoff;
-    
-	
+    private int places;
+
+
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public LocalTime getTime() {
+        return time;
+    }
+
+    public void setTime(LocalTime time) {
+        this.time = time;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getPlaces() {
+        return places;
+    }
+
+    public void setPlaces(int places) {
+        this.places = places;
+    }
+
     public int getCid() {
         return cid;
     }
@@ -62,15 +100,7 @@ public class Cab {
     public void setDriverName(String driver_name) {
         this.driver_name = driver_name;
     }
-    
-    public String getVacantSpace() {
-        return vacant_space;
-    }
 
-    public void setVacantSpace(String vacant_space) {
-        this.vacant_space = vacant_space;
-    }
-    
     public String getSource() {
         return source;
     }
@@ -86,15 +116,7 @@ public class Cab {
     public void setDestination(String destination) {
         this.destination = destination;
     }
-    
-    public String getDriverAuth() {
-        return driver_auth;
-    }
 
-    public void setDriverAuth(String driver_auth) {
-        this.driver_auth = driver_auth;
-    }
-    
     public String getDriverMob() {
         return driver_mob;
     }
@@ -110,18 +132,5 @@ public class Cab {
     public void setComanyId(String compnyId) {
         this.compnyId = compnyId;
     }
-    public String getpickup() {
-        return pickup;
-    }
 
-    public void setPickup(String pickup) {
-        this.pickup = pickup;
-    }
-    public String getDropoff() {
-        return dropoff;
-    }
-
-    public void setDropoff(String dropoff) {
-        this.dropoff = dropoff;
-    }
 }

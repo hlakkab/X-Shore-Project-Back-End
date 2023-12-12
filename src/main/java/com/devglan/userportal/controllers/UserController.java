@@ -1,5 +1,8 @@
-package com.devglan.userportal;
+package com.devglan.userportal.controllers;
 
+import com.devglan.userportal.models.Cab;
+import com.devglan.userportal.models.User;
+import com.devglan.userportal.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.*;
@@ -46,4 +49,19 @@ public class UserController {
     public List<User> findAll(){
         return userService.findAll();
     }
+
+    @PostMapping(path ={"/{id}"})
+    public User getClientInfo(@PathVariable("id") int id) {
+        return userService.findById(id);
+    } // New
+
+    @GetMapping(path = {"/{id}"})
+    public List<Cab> findAllCabsByUserId(@PathVariable("id") int id){
+        return userService.getAllCabsByUserId(id);
+    } //New
+
+    @PostMapping(path = {"/{id}"})
+    public void create(@RequestBody Cab cab,@PathVariable("id") int id){
+        userService.createCab(cab,id);
+    } //T9d dir prob
 }
